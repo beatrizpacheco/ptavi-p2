@@ -12,31 +12,35 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         sys.exit('Úsalo así: python3 calcplus.py <fichero>')
 
-    fich = sys.argv[1]
+    path = sys.argv[1]
     calc = CalculadoraHija()
     
-    with open(fich) as csvarchivo:
-        entrada = csv.reader(csvarchivo)
+    with open(path, 'r') as fich:
+        entrada = csv.reader(fich)
         for linea in entrada:
             
             print(linea)
             #print(operandos) lo uso o uso lineas?
             #No sé si hacer el for fuera o dentro
             
-            resultado = int(linea[1])
+            if len(linea) >= 2:
+                resultado = linea[1]
+            else:
+                resultado = 0
+                print('Empty list')
             
             if linea[0] == 'suma':
                 for num in linea[2:]:
-                    resultado = calc.suma(resultado, int(num))
+                    resultado = calc.suma(resultado, num)
             elif linea[0] == "resta":
                 for num in linea[2:]:
-                    resultado = calc.resta(resultado, int(num))
+                    resultado = calc.resta(resultado, num)
             elif linea[0] == "multiplica":
                 for num in linea[2:]:
-                    resultado = calc.multiplica(resultado, int(num))
+                    resultado = calc.multiplica(resultado, num)
             elif linea[0] == "divide":
                 for num in linea[2:]:
-                    resultado = calc.divide(resultado, int(num))
+                    resultado = calc.divide(resultado, num)
             else:
                 print('suma, resta, multiplica o divide')
                       
