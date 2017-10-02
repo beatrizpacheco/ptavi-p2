@@ -3,7 +3,7 @@
 
 import sys
 import csv
-
+import os.path as path
 from calcoohija import CalculadoraHija
 
 if __name__ == "__main__":
@@ -11,10 +11,12 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         sys.exit("You writte: 'python3 calcplusplus.py <fichero>'")
 
-    path = sys.argv[1]
+    if not path.exists(sys.argv[1]):
+        sys.exit("Name file incorrect")
+
     calc = CalculadoraHija()
 
-    with open(path, 'r') as fich:
+    with open(sys.argv[1], 'r') as fich:
         entrada = csv.reader(fich)
         for linea in entrada:
 
