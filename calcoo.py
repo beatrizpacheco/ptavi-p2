@@ -12,18 +12,14 @@ class Calculadora():
     
     def suma(self, valor1, valor2):
         """Sumo valor1 y valor2"""
-        try:
-            return int(valor1) + int(valor2)
-        except ValueError:
-            sys.exit("Error: Non numerical parameters")
+        return valor1 + valor2
+        
         
     
     def resta(self, valor1, valor2):
         """Sumo valor1 y valor2"""
-        try:
-            return int(valor1) - int(valor2)
-        except ValueError:
-            sys.exit("Error: Non numerical parameters")
+        return valor1 - valor2
+        
             
             
 

@@ -14,19 +14,16 @@ class CalculadoraHija(Calculadora):
     def divide(self, valor1, valor2):
         """Divide valor1 y valor2"""
         try:
-            return int(valor1) / int(valor2)
+            return valor1 / valor2
         
         except ZeroDivisionError:
             sys.exit('Division by zero is not allowed')
-        except ValueError:
-            sys.exit("Error: Non numerical parameters")
+        
     
     def multiplica(self, valor1, valor2):
         """Multiplica valor1 y valor2"""
-        try:
-            return int(valor1) * int(valor2)
-        except ValueError:
-            sys.exit("Error: Non numerical parameters")
+        return valor1 * valor2
+        
         
 if __name__ == "__main__":
   
