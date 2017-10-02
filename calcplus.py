@@ -19,7 +19,6 @@ if __name__ == "__main__":
 
             linea = cadena[:-1].split(',')  # Cadena[:-1] es para quitar el \n
 
-            print(linea)
             operandos = linea[1:]
             try:
                 operandos_int = [float(i) for i in operandos]
@@ -30,7 +29,6 @@ if __name__ == "__main__":
                 resultado = operandos_int[0]
             else:
                 resultado = 0
-                print('Empty list')
 
             if linea[0] == 'suma':
                 for num in operandos_int[1:]:
