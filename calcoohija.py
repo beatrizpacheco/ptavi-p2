@@ -23,7 +23,7 @@ class CalculadoraHija(Calculadora):
 if __name__ == "__main__":
 
     if len(sys.argv) != 4:
-        msg = 'Úsalo así: python3 calcoohija.py operando1 operación operando2'
+        msg = "You writte: 'python3 calcoohija.py num1 operación num2'"
         sys.exit(msg)
 
     operador = sys.argv[2]
@@ -44,4 +44,4 @@ if __name__ == "__main__":
     elif operador == 'divide':
         print(calc.divide(operando1, operando2))
     else:
-        print('Usa: suma, resta, multiplica, divide')
+        print("You writte: 'suma, resta, multiplica, divide'")

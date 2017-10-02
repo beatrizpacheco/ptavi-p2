@@ -8,7 +8,7 @@ from calcoohija import CalculadoraHija
 if __name__ == "__main__":
 
     if len(sys.argv) != 2:
-        sys.exit('Úsalo así: python3 calcplus.py <fichero>')
+        sys.exit("You writte: 'python3 calcplusplus.py <fichero>'")
 
     path = sys.argv[1]
     calc = CalculadoraHija()
@@ -45,6 +45,6 @@ if __name__ == "__main__":
                 for num in operandos_int[1:]:
                     resultado = calc.divide(resultado, num)
             else:
-                print('suma, resta, multiplica o divide')
+                print("You writte: 'suma, resta, multiplica o divide'")
 
             print(resultado)

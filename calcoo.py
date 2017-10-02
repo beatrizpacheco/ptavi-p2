@@ -17,7 +17,8 @@ class Calculadora():
 if __name__ == "__main__":
 
     if len(sys.argv) != 4:
-        sys.exit('Úsalo así: python3 calcoo.py operando1 operador operando2')
+        msg = "You writte: 'python3 calcoo.py operando1 operador operando2'"
+        sys.exit(msg)
 
     operador = sys.argv[2]
     try:
@@ -33,6 +34,6 @@ if __name__ == "__main__":
     elif operador == 'resta':
         print(calc.resta(operando1, operando2))
     else:
-        print('Usa: suma, resta')
+        print("You writte: 'suma, resta'")
 
 # instanciar es pasar de algo abstracto a algo concreto
